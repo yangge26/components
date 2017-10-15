@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>下拉选择</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				font-family: "微软雅黑";
+				font-size: 16px;
+			}
+			
+			.box {
+				width: 270px;
+				position: relative;
+			}
+			
+			.box input {
+				font-weight: normal;
+				font-size: 16px;
+				height: 38px;
+				line-height: 38px;
+				border: 1px solid #ccc;
+				cursor: pointer;
+				width: 260px;
+				box-shadow: 0 0 3px #aaa;
+				text-indent: 15px;
+				font-family: "微软雅黑";
+			}
+			
+			ul {
+				border: 1px solid #ccc;
+				border-top: 0;
+				box-shadow: 0 0 3px #aaa;
+				line-height: 38px;
+				width: 260px;
+				position: absolute;
+				top: 38px;
+				background: #fff;
+				list-style: none;
+				text-indent: 15px;
+				display: none;
+			}
+			
+			ul li {
+				cursor: pointer;
+			}
+			
+			li:hover {
+				background: #aaa;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<input value="请选择你喜欢的角色" readonly="readonly" type="text" />
+			<ul>
+				<li data-value="1">漩涡鸣人</li>
+				<li data-value="2">宇智波佐助</li>
+				<li data-value="3">我爱罗</li>
+				<li data-value="4">旗木卡卡西</li>
+				<li data-value="4">自来也</li>
+			</ul>
+		</div>
+		<script>
+			!(function() {
+				var el = document.querySelector('.box'),
+					ul = el.getElementsByTagName('ul')[0],
+					li = el.getElementsByTagName('li'),
+					inputEl = el.getElementsByTagName('input')[0];
+				el.addEventListener('mouseenter', function() {
+					ul.style.display = 'block';
+				});
+				el.addEventListener('mouseleave', function() {
+					ul.style.display = 'none';
+				});
+				for(var i = 0; i < li.length; i++) {
+					li[i].addEventListener('click', function() {
+						var text = this.innerHTML;
+						inputEl.value = text;
+						ul.style.display = 'none';
+					});
+				}
+			})();
+		</script>
+	</body>
+
+</html>

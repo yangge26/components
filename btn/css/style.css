@@ -1,0 +1,197 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0px;padding:0px;font-family: "微软雅黑";}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:"";}
+abbr,acronym{border:0;}
+
+/*按钮*/
+
+.btn {
+	box-sizing: border-box;
+	cursor: pointer;
+	text-align: center;
+	font-weight: 400;
+	white-space: nowrap;	
+	-moz-padding-start: npx;
+	-moz-padding-end: npx;
+	border: solid 1px #ddd;
+	background-color: #fff;
+	width: auto;
+	-webkit-transition:background-color .1s linear;
+	-moz-transition:background-color .1s linear;
+	-o-transition:background-color .1s linear;
+	transition:background-color .1s linear;
+	padding: 4px 12px;
+}
+
+.radius{border-radius:4px}
+.size-MINI.radius{ border-radius:3px}
+.size-L.radius{ border-radius:5px}
+.size-XL.radius{ border-radius:6px}
+.round{border-radius:50%; overflow:hidden}
+
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn.active,
+a.btn.disabled,
+a.btn[disabled] {
+	text-decoration: none
+}
+
+.btn:active,
+.btn.active {
+	background-color: #ccc
+}
+
+.btn:first-child {
+	*margin-left: 0
+}
+
+.btn.active,
+.btn:active {
+	-moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset;
+	-webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset;
+}
+
+
+/*默认——灰色 通常用于取消*/
+
+.btn-default {
+	background-color: #e6e6e6
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+	color: #333;
+	background-color: #c7c7c7;
+	border-color: #c7c7c7
+}
+
+
+/*主要——主色 通常用于确定、提交、购买、支付等*/
+
+.btn-primary {
+	color: #fff;
+	background-color: #5a98de;
+	border-color: #5a98de
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+	color: #fff;
+	background-color: #6aa2e0;
+	border-color: #6aa2e0
+}
+
+
+/*次要按钮*/
+
+.btn-secondary {
+	color: #fff;
+	background-color: #3bb4f2;
+	border-color: #3bb4f2
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+	color: #fff;
+	background-color: #0f9ae0;
+	border-color: #0f9ae0
+}
+
+
+/*成功*/
+
+.btn-success {
+	color: #fff;
+	background-color: #5eb95e;
+	border-color: #5eb95e
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+	color: #fff;
+	background-color: #429842;
+	border-color: #429842
+}
+
+
+/*警告*/
+
+.btn-warning {
+	color: #fff;
+	background-color: #f37b1d;
+	border-color: #f37b1d
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active {
+	color: #fff;
+	background-color: #c85e0b;
+	border-color: #c85e0b
+}
+
+
+/*危险*/
+
+.btn-danger {
+	color: #fff;
+	background-color: #dd514c;
+	border-color: #dd514c
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {
+	color: #fff;
+	background-color: #c62b26;
+	border-color: #c62b26
+}
+
+
+/*链接*/
+
+.btn-link {
+	color: #0e90d2;
+	cursor: pointer;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.btn-link.active {
+	color: #095f8a;
+	text-decoration: underline;
+	background-color: transparent
+}
+
+
+/*禁用状态*/
+
+.btn.disabled {
+	cursor: not-allowed;
+	background-image: none;
+	opacity: .65;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+	pointer-events: none;
+}

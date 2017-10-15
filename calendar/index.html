@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 60px;
+				line-height: 60px;
+				background: #00A1F5;
+				border-radius: 10px;
+				margin: 15px auto;
+				padding: 0px 5px;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			#text {
+				color: #FFFFFF;
+				font-size: 16px;
+			}
+		</style>
+		<title>日期选择器</title>
+	</head>
+
+	<body>
+
+		<div id="box">
+			<span id="text"></span>
+		</div>
+
+		<div id="cal"></div>
+		<script src="js/calendar.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			! function() {
+
+				var c = new Calendar();
+				c.init({
+					id: 'cal',
+					handler: function(dstr) {
+						document.getElementById("text").innerHTML = dstr;
+					}
+				});
+
+				document.getElementById("text").innerHTML = c.getNowStr();
+
+				document.getElementById("box").addEventListener('click', function() {
+					c.show();
+				});
+			}();
+		</script>
+	</body>
+
+</html>

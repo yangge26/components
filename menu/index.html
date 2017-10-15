@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>下拉菜单</title>
+		<meta charset="UTF-8" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<style>
+			ul {
+				width: 276px;
+			}
+			
+			li {
+				cursor: pointer;
+			}
+			
+			.menu_demo {
+				font-size: 13px;
+				list-style: none;
+			}
+			
+			.menu_demo> li {
+				padding: 1.2em;
+				background-color: #0E90D2;
+				border-bottom: solid #AEB4BB 1px;
+				box-sizing: border-box;
+			}
+			
+			.menu_demo> li:first-child {
+				border-radius: 12px 12px 0 0;
+			}
+			
+			.menu_demo> li:last-child {
+				border-radius: 0 0 12px 12px;
+			}
+			
+			.menu_child {
+				box-sizing: border-box;				
+				background-color: #999999;
+				overflow: hidden;
+				max-height: 0;
+				transition: all .3s linear;
+			}
+			
+			.menu_child.open {
+				max-height: 100px;
+			}
+			
+			.menu_child> li {
+				list-style: none;
+				margin-left: -10px;
+				padding: 2% 0;
+			}
+			
+			.menu_item {
+				color: #ffffff;
+				font-family: "微软雅黑";
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="menu_demo">
+			<li class="menu_item">
+				<span>账户</span>
+			</li>
+			<ul class="menu_child">
+				<li> <span>基本信息</span></li>
+				<li> <span>设置头像</span></li>
+			</ul>
+			<li class="menu_item">
+				<span>消息</span>
+			</li>
+			<ul class="menu_child">
+				<li> <span>收到的信息</span></li>
+				<li> <span>发出的信息</span></li>
+				<li> <span>垃圾箱</span></li>
+			</ul>
+			<li class="menu_item">
+				<span>设置</span>
+			</li>
+			<ul class="menu_child">
+				<li> <span>语言</span></li>
+				<li> <span>设置密码</span></li>
+				<li> <span>字体大小</span></li>
+			</ul>
+			<li class="menu_item">
+				<span>退出</span>
+			</li>
+		</ul>
+
+		<script>
+			var list = document.querySelectorAll('.menu_item');
+
+			for(var i = 0; i < list.length; i++) {
+
+				list[i].addEventListener('click', function(num) {
+					return function() {
+						var el = document.querySelectorAll('.menu_child')[num];
+						if(el) {
+							el.classList.toggle('open');
+						}
+					};
+				}(i));
+			}
+		</script>
+	</body>
+
+</html>
