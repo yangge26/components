@@ -5,3 +5,4 @@
 - [下拉选择框](https://yangge26.github.io/components/select/index.html)
 - [手机日期选择](https://yangge26.github.io/components/calendar/index.html)
 - [图片懒加载](https://yangge26.github.io/components/lazyimage/index.html)
+- [图片无限轮播](https://yangge26.github.io/components/slider/index.html)

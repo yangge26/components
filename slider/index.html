@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+	</head>
+
+	<body>
+		<div class="box"></div>
+		<button id="pre">prev</button>
+		<button id="next">next</button>
+		<script src="slider.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var arr = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg']
+			slider.init({
+				el: document.querySelectorAll(".box")[0],
+				width: 450,
+				height: 240,
+				imgArr: arr
+			});
+			document.getElementById("pre").addEventListener('click', function() {
+				slider.moveRight();
+			});
+			document.getElementById("next").addEventListener('click', function() {
+				slider.moveLeft();
+			});
+		</script>
+	</body>
+
+</html>
