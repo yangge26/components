@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <title>3D图片切换</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">			
+			<section id="dg-container" class="dg-container">
+				<div class="dg-wrapper">
+					<a href="#"><img src="images/1.jpg" alt="image01" width="100%"></a>
+					<a href="#"><img src="images/2.jpg" alt="image02" width="100%"></a>
+					<a href="#"><img src="images/3.jpg" alt="image03" width="100%"></a>
+					<a href="#"><img src="images/4.jpg" alt="image04" width="100%"></a>
+					<a href="#"><img src="images/1.jpg" alt="image01" width="100%"></a>
+					<a href="#"><img src="images/2.jpg" alt="image02" width="100%"></a>
+					<a href="#"><img src="images/3.jpg" alt="image03" width="100%"></a>
+					<a href="#"><img src="images/4.jpg" alt="image04" width="100%"></a>
+				</div>
+				<nav>	
+					<span class="dg-prev">prev</span>
+					<span class="dg-next">next</span>
+				</nav>
+			</section>
+        </div>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gallery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#dg-container').gallery();
+			});
+		</script>
+    </body>
+</html>
