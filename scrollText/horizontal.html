@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文字水平滚动</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 300px;
+				overflow: hidden;
+			}
+			
+			.container {
+				font-family: "microsoft yahei";
+				box-sizing: border-box;
+				background: #40BCFF;
+				color: #FFFFFF;
+				height: 40px;
+				line-height: 40px;
+				padding-left: 5px;
+				font-size: 20px;
+				font-weight: bold;
+				position: relative;
+			}
+			
+			.content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50%;
+				transform: translateX(0);
+			}
+			
+			.content.next {
+				transform: translateX(100%);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box">
+			<div class="container">
+				<div class="content">恭喜小明同学获得全国第三名，真是令人激动的事</div>
+				<div class="content next">恭喜小明同学获得全国第三名，真是令人激动的事</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			(function() {
+				var size = 1000;
+
+				var container = document.querySelectorAll(".container")[0];
+				container.style.width = size + 'px';
+				var count = 0;
+
+				function move() {
+					count += 2;
+					if(count == size / 2) {
+						count = 0;
+					}
+					container.style.transform = 'translateX(-' + count + 'px)';
+					requestAnimationFrame(move);
+				}
+
+				requestAnimationFrame(move);
+
+			})();
+		</script>
+
+	</body>
+
+</html>
