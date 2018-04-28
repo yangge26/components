@@ -9,11 +9,14 @@
 				padding: 0;
 			}
 			#box{
-				background-color: #0099CC;
-				font-size: 20px;
-				padding-left: 10px;
 				box-sizing: border-box;
+				background-color: #00A1F5;
+				font-size: 28px;
+				padding-left: 10px;
 				color: #FFFFFF;
+				width: 450px;
+				height: 50px;
+				line-height: 50px;
 			}
 		</style>
 	</head>
@@ -21,13 +24,12 @@
 	<body>
 		<div id="box">
 			<ul>
-				<li>hello,world1</li>
-				<li>hello,world2</li>
-				<li>hello,world3</li>
-				<li>hello,world4</li>
-				<li>hello,world5</li>
-				<li>hello,world6</li>
-				<li>hello,world7</li>
+				<li>Hello,world1</li>
+				<li>Hello,world2</li>
+				<li>Hello,world3</li>
+				<li>Hello,world4</li>
+				<li>Hello,world5</li>
+				<li>Hello,world6</li>
 			</ul>
 		</div>
 
@@ -78,7 +80,7 @@
 
 			init({
 				el: document.getElementById("box"),
-				height: 40,
+				height: document.getElementById("box").clientHeight,
 				autoplay: 3000
 			});
 		</script>
