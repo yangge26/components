@@ -9,3 +9,4 @@
 - [步骤条](https://yangge26.github.io/components/step/index.html)
 - [图片3D切换效果](https://yangge26.github.io/components/gallery/index.html)
 - [文字滚动](https://yangge26.github.io/components/scrollText/index.html)
+- [全屏滚动](https://yangge26.github.io/components/fullpage/index.html)
